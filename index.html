@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>La Página de Vorrachis 🍞👑</title>
+<meta name="description" content="La página oficial del lore: el pan es más rico que la llave. Sisisiii." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22 font-size=%2280%22><text y=%22.9em%22>🍞</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Bangers&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- ===== DOCK DE ACCIONES (esquina, para más dopamina) ===== -->
+  <div class="action-dock" id="actionDock">
+    <button class="action-btn" data-action="confetti" title="Confeti YA">🎉</button>
+    <button class="action-btn" id="soundBtn" data-action="sound" title="Sonido">🔊</button>
+    <button class="action-btn" data-action="breadrain" title="Lluvia de pan">🍞</button>
+    <button class="action-btn" data-action="dance" title="Bailar más rápido">💃</button>
+    <button class="action-btn" data-action="quote" title="Frase random">💬</button>
+    <button class="action-btn" data-action="party" title="MODO PARTY">🪩</button>
+  </div>
+
+  <!-- ===== FONDO: LAS TÍAS BIEN ESPAÑOLAS ===== -->
+  <div class="dancers" aria-hidden="true">
+    <div class="dancer dancer--a">
+      <div class="dancer__fan">🪭</div>
+      <div class="dancer__head"><div class="dancer__flower"></div></div>
+      <div class="dancer__body"></div>
+    </div>
+    <div class="dancer dancer--b">
+      <div class="dancer__fan">🪭</div>
+      <div class="dancer__head"><div class="dancer__flower"></div></div>
+      <div class="dancer__body"></div>
+    </div>
+    <div class="dancer dancer--c">
+      <div class="dancer__fan">🪭</div>
+      <div class="dancer__head"><div class="dancer__flower"></div></div>
+      <div class="dancer__body"></div>
+    </div>
+  </div>
+
+  <div class="floaters" aria-hidden="true">
+    <span class="floater">🍞</span><span class="floater">🔑</span><span class="floater">💅</span>
+    <span class="floater">✨</span><span class="floater">🍞</span><span class="floater">👑</span>
+    <span class="floater">🔑</span><span class="floater">💃</span><span class="floater">🍞</span>
+  </div>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <header class="hero">
+      <p class="kicker">✨ bienvenidx al lore oficial ✨</p>
+      <h1 class="title">VORRACHIS <span class="crown">👑🍞👑</span></h1>
+      <p class="subtitle">la página donde el <b>PAN</b> le mete un golpe bajo a la <b>LLAVE</b> — sisisiii, está tó rico, está tó guay 💅🔥</p>
+      <div class="scrolldown">👇 baja pa' más dopamina 👇</div>
+    </header>
+
+    <!-- ===== BATALLA PAN VS LLAVE ===== -->
+    <section class="battle">
+      <h2>🍞 EL PAN <span>VS</span> LA LLAVE 🔑</h2>
+      <div class="battle-bar">
+        <div class="battle-fill" id="battleFill"></div>
+        <span class="battle-label battle-label--left">PAN</span>
+        <span class="battle-label battle-label--right">LLAVE</span>
+      </div>
+      <p class="battle-caption" id="battleCaption">98.7% de la ciencia confirma: el pan es más rico que la llave 📊🔥</p>
+    </section>
+
+    <!-- ===== BRAINROTS ===== -->
+    <section class="brainrots">
+      <h2>los brainrots oficiales del lore <span class="tiny">(canon 100%)</span></h2>
+      <div class="brainrot-grid" id="brainrotGrid">
+        <!-- generado por JS -->
+      </div>
+    </section>
+
+    <!-- ===== MÁQUINA DE DOPAMINA ===== -->
+    <section class="dopamine">
+      <h2>MÁQUINA DE DOPAMINA</h2>
+      <p class="dopamine-sub">toca el pan cuántas veces quieras, es gratis y no engorda</p>
+      <button id="dopamineBtn" class="dopamine-btn">
+        <span class="dopamine-emoji">🍞</span>
+        <span>TOCA AQUÍ</span>
+        <small>para más dopamina, sisisiii</small>
+      </button>
+      <p class="dopamine-level">nivel de dopamina: <span id="dopamineCount">0</span>%</p>
+      <div class="dopamine-bar"><div class="dopamine-bar__fill" id="dopamineBarFill"></div></div>
+      <p id="dopaminePhrase" class="dopamine-phrase">&nbsp;</p>
+    </section>
+
+    <footer class="footer">
+      hecho con 🍞, mucho amor y cero llaves para <b>vorrachis</b> · 2026 · no se aceptan reclamos de la llave 🔑🚫
+    </footer>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
